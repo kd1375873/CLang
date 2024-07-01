@@ -1,0 +1,35 @@
+#include <stdio.h>
+int Get_max(int*array,int size);
+int Get_min(int*array,int size);
+main()
+{
+	int a[8] = { 6,10,8,2,9,5,1,7 };
+	
+	printf("Å‘å’l=%d\n", Get_max(a, 8));
+	printf("Å¬’l=%d\n", Get_min(a, 8));
+}
+int Get_max(int* array, int size)
+{
+	int i, max;
+	for (max=*array,i=1; i < size; i++)
+	{
+		if(max < *(array + i))
+		{
+			max = *(array + i);
+		}
+	}
+	return max;
+}
+int Get_min(int*array,int size)
+{
+	int min, i;
+
+	for (min = *array, i = 1; i < size; i++)
+	{
+		if (min > *(array + i))
+		{
+			min = *(array + i);
+		}
+	}
+	return min;
+}

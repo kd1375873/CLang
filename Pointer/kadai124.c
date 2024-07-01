@@ -1,0 +1,13 @@
+#include <stdio.h>
+main()
+{
+	char c; char *c_p;
+
+	c_p = &c;
+
+	printf("ˆê•¶Žš“ü—Í");
+	scanf("%c", &c);
+
+	printf("ŽŸ‚Ì•¶Žš‚Í%c", *c_p + 1);
+
+}
